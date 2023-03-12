@@ -9,6 +9,7 @@ module.exports = {
   plugins: [
     copy({
       targets: [{ src: "index.html", dest: "dist" }],
+      targets: [{ src: "gameover.html", dest: "dist" }],
     }),
   ],
 };
