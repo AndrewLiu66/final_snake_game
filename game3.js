@@ -71,8 +71,10 @@ function draw() {
     fill(124, 14, 161);
     text("Your current score: " + score, 10, 40);
     let highest = localStorage.getItem("highestScore");
-
-    console.log("highest", highest);
+    if (highest === null)
+    {
+        highest = 0;
+    }
     text("Your highest score: " + highest, 10, 80);
 }
 
@@ -172,7 +174,6 @@ class Snake {
             let d = dist(this.x, this.y, this.tail[i].x, this.tail[i].y);
             if (d < 1)
             {
-                console.log("game over2");
                 this.gameOver();
             }
         }
@@ -182,7 +183,6 @@ class Snake {
             let d = dist(this.x, this.y, obstacles[i].x, obstacles[i].y);
             if (d < 1)
             {
-                console.log("game over3");
                 this.gameOver();
             }
         }
@@ -259,7 +259,6 @@ class Snake {
         } else if (randomZeroOrOne === 1) {
             this.powerupType = "longer";
         }
-        console.log("generated power", this.powerupType);
     }
 
 
