@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gluttonous Snake Game</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1/lib/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1/lib/addons/p5.sound.min.js"></script>
+  <script src="https://unpkg.com/@free-side/audioworklet-polyfill/dist/audioworklet-polyfill.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/planck@latest/dist/planck.min.js"></script>
+  <script src="https://p5play.org/v3/p5play.js"></script>
+  <style>
+    #startBtn {
+      width: 50vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 32px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f7f49c;
+      color: white;
+      cursor: pointer;
+    }
+    .infoBox {
+      /* background: orange; */
+      color: black;
+    }
+    .start_game_container {
+      /* background: blue; */
+      display:flex;
+      justify-content: center;
+    }
+    #start_button {
+      border-radius: 10px;
+      background: rgb(69, 215, 174);
+      font-size: 30px;
+      padding: 10px 20px;
+    }
+    .intro {
+      text-align: center;
+      color: black
+    }
+    .red_container {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    .red_box {
+      width: 40px;
+      height: 40px;
+      background: red;
+    }
+    .blue_box {
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      background: rgb(112, 179, 255);
+    }
+    .grey_box {
+      width: 40px;
+      height: 40px;
+      background: rgb(132, 133, 134);
+    }
+    .explanation_text {
+      font-size: 16px;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="startBtn">
+    <div class="intro">Intruction</div>
+    <div class="infoBox">
+      <div class="red_container">
+        <div class="red_box"></div>
+        <div class="explanation_text">Regular food: This is the regular snake food, eat the regular food will add up 1 point for your score</div>
+      </div>
+
+      <div class="red_container">
+        <div class="blue_box"></div>
+        <div class="explanation_text">The power-up fruit: This is the power-up food. Eat the power-up food will give your snake a special ability, either speed up the snake or get a longer body for the snake(+5 points)</div>
+      </div>
+
+      <div class="red_container">
+        <div class="grey_box"></div>
+        <div class="explanation_text">The Wall:You will lost the game if you snake hits the wall!</div>
+      </div>
+    </div>
+
+    <div class="start_game_container">
+      <button id="start_button">Start Game</button>
+    </div>
+  </div>
+  <!-- <button id="startBtn">Start Game</button> -->
+  <script src="game3.js"></script>
+</body>
+</html>
