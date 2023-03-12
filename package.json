@@ -1,0 +1,15 @@
+{
+	"name": "glob",
+	"main": "game.js",
+	"scripts": {
+		"start": "web-dev-server --node-resolve --open --watch",
+		"build": "rollup --config",
+		"deploy": "npm run build && gh-pages -d dist"
+	},
+	"devDependencies": {
+		"@web/dev-server": "^0.1.35",
+		"gh-pages": "^5.0.0",
+		"rollup": "^2.79.1",
+		"rollup-plugin-copy": "^3.4.0"
+	}
+}
